@@ -1,0 +1,202 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Premium serif design system with elegant typography and refined color palette */
+
+@layer base {
+  :root {
+    --background: 44 20% 97%;
+    --foreground: 220 13% 18%;
+
+    --card: 44 20% 99%;
+    --card-foreground: 220 13% 18%;
+
+    --popover: 44 20% 99%;
+    --popover-foreground: 220 13% 18%;
+
+    --primary: 220 50% 25%;
+    --primary-foreground: 44 20% 97%;
+
+    --secondary: 44 15% 92%;
+    --secondary-foreground: 220 13% 25%;
+
+    --muted: 44 15% 94%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 45 85% 55%;
+    --accent-foreground: 220 13% 18%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 44 15% 88%;
+    --input: 44 15% 88%;
+    --ring: 45 85% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 44 20% 96%;
+    --sidebar-foreground: 220 13% 25%;
+    --sidebar-primary: 220 50% 25%;
+    --sidebar-primary-foreground: 44 20% 97%;
+    --sidebar-accent: 44 15% 90%;
+    --sidebar-accent-foreground: 220 13% 25%;
+    --sidebar-border: 44 15% 85%;
+    --sidebar-ring: 45 85% 55%;
+  }
+
+  .dark {
+    --background: 220 25% 8%;
+    --foreground: 44 20% 95%;
+
+    --card: 220 25% 10%;
+    --card-foreground: 44 20% 95%;
+
+    --popover: 220 25% 10%;
+    --popover-foreground: 44 20% 95%;
+
+    --primary: 45 85% 65%;
+    --primary-foreground: 220 25% 8%;
+
+    --secondary: 220 20% 15%;
+    --secondary-foreground: 44 20% 90%;
+
+    --muted: 220 20% 12%;
+    --muted-foreground: 44 10% 65%;
+
+    --accent: 45 85% 55%;
+    --accent-foreground: 220 25% 8%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 20% 18%;
+    --input: 220 20% 18%;
+    --ring: 45 85% 55%;
+
+    --sidebar-background: 220 25% 6%;
+    --sidebar-foreground: 44 20% 90%;
+    --sidebar-primary: 45 85% 65%;
+    --sidebar-primary-foreground: 220 25% 6%;
+    --sidebar-accent: 220 20% 12%;
+    --sidebar-accent-foreground: 44 20% 90%;
+    --sidebar-border: 220 20% 15%;
+    --sidebar-ring: 45 85% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: "liga" 1, "kern" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+    font-feature-settings: "liga" 1, "kern" 1, "swsh" 1;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    @apply leading-relaxed;
+    font-feature-settings: "liga" 1, "kern" 1;
+  }
+}
+
+/* Premium smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Refined animations */
+@keyframes elegant-float {
+  0%,
+  100% {
+    transform: translateY(0px) scale(1);
+  }
+  50% {
+    transform: translateY(-8px) scale(1.02);
+  }
+}
+
+.elegant-float {
+  animation: elegant-float 8s ease-in-out infinite;
+}
+
+/* Premium gradient backgrounds */
+.bg-premium-gradient {
+  background: linear-gradient(135deg, #faf8f3 0%, #f4f0e6 50%, #e8dfc7 100%);
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+}
+
+.bg-therapeutic-gradient {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+}
+
+/* Premium text effects */
+.text-gold-shimmer {
+  background: linear-gradient(45deg, #d4af37, #b8941f, #d4af37);
+  background-size: 200% 200%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Elegant shadows */
+.shadow-premium {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-premium-lg {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15),
+    0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 6px;
+  /* border: 2px solid white; */
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
